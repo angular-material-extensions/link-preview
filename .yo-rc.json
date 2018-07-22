@@ -1,0 +1,42 @@
+{
+  "generator-ngx-library": {
+    "version": "6.2.1",
+    "authorName": "Anthony Nahas",
+    "authorEmail": "anthony.na@hotmail.de",
+    "githubUsername": "angular-material-extensions",
+    "githubRepoName": "link-preview",
+    "projectName": "@angular-material-extensions/link-preview",
+    "projectVersion": "0.0.1",
+    "projectDescription": "Angular open source UI library to preview web links",
+    "projectKeywords": [
+      "angular",
+      "ui",
+      "library",
+      "material",
+      "material design",
+      "preview web links",
+      "render web links"
+    ],
+    "ngVersion": "6.0.0",
+    "ngModules": [
+      "core",
+      "common",
+      "http",
+      "platform-browser"
+    ],
+    "otherDependencies": [],
+    "additionalPackageFiles": [],
+    "dependenciesRange": "^",
+    "ngPrefix": "mat",
+    "testingFramework": "jest",
+    "useGreenkeeper": true,
+    "useCompodoc": true,
+    "enforceNgGitCommitMsg": true,
+    "exclusions": [
+      "config/karma.conf.js",
+      "config/webpack.test.js",
+      "config/karma-test-shim.js"
+    ],
+    "deleteExclusions": []
+  }
+}
