@@ -1,23 +1,23 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { LibService } from './lib.service';
+import { LinkPreviewService } from './link-preview.service';
 
 describe('LibService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [LibService]
+      providers: [LinkPreviewService]
     });
   });
 
-  it('should create service', inject([LibService], (service: LibService) => {
+  it('should create service', inject([LinkPreviewService], (service: LinkPreviewService) => {
     expect(service).toBeTruthy();
   }));
 
-  it('should say hello to stranger', inject([LibService], (service: LibService) => {
+  it('should say hello to stranger', inject([LinkPreviewService], (service: LinkPreviewService) => {
     expect(service.sayHello()).toBe('Hello Stanger!');
   }));
 
- it('should say hello to provided user', inject([LibService], (service: LibService) => {
+ it('should say hello to provided user', inject([LinkPreviewService], (service: LinkPreviewService) => {
     expect(service.sayHello('ng-hacker')).toBe('Hello ng-hacker!');
   }));
 });
