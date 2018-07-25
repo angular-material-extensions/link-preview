@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
     ModuleMapLoaderModule,
     ServerTransferStateModule,
   ],
-  // Since the bootstrapped component is not inherited from your
+  // Since the bootstrapped components is not inherited from your
   // imported AppModule, it needs to be repeated here.
   bootstrap: [AppComponent],
 })

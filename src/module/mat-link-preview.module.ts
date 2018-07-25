@@ -1,19 +1,25 @@
-import { CommonModule } from '@angular/common';
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {NgModule, ModuleWithProviders} from '@angular/core';
 
-import { LibComponent } from './component/lib.component';
-import { LinkPreviewService } from './service/link-preview.service';
+import {LinkPreviewComponent} from './components/link-preview.component';
+import {LinkPreviewService} from './service/link-preview.service';
+import {NgxLinkifyjsModule} from 'ngx-linkifyjs';
+import {HttpClientModule} from '@angular/common/http';
+import {MatCardModule} from '@angular/material';
 
 // Export module's public API
-export { LibComponent } from './component/lib.component';
-export { LinkPreviewService } from './service/link-preview.service';
+export {LinkPreviewComponent} from './components/link-preview.component';
+export {LinkPreviewService} from './service/link-preview.service';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule,
+    NgxLinkifyjsModule.forRoot(),
+    MatCardModule,
   ],
-  exports: [LibComponent],
-  declarations: [LibComponent]
+  exports: [LinkPreviewComponent],
+  declarations: [LinkPreviewComponent]
 })
 export class MatLinkPreviewModule {
   static forRoot(): ModuleWithProviders {
