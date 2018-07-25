@@ -38,7 +38,8 @@
     "@angular/flex-layout": "^6.0.0-beta.16",
     "@angular/http": "^6.0.9",
     "@angular/material": "^6.4.1",
-    "@angular/platform-browser": "^6.0.9"
+    "@angular/platform-browser": "^6.0.9",
+    "ngx-linkifyjs": "^1.0.0"
   },
   "devDependencies": {
     "@angular/animations": "^6.0.9",
