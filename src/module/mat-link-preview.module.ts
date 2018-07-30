@@ -15,7 +15,7 @@ export {LinkPreviewService} from './service/link-preview.service';
   imports: [
     CommonModule,
     HttpClientModule,
-    NgxLinkifyjsModule.forRoot(),
+    NgxLinkifyjsModule,
     MatCardModule,
   ],
   exports: [LinkPreviewComponent],

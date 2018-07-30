@@ -40,21 +40,21 @@ describe('LinkPreviewService', () => {
       }, `Get link info from api`);
     })));
 
-  it(`should emit 'false' for 404 not found`, async(inject([LinkPreviewService, HttpTestingController],
-    (service: LinkPreviewService, backend: HttpTestingController) => {
-      service.fetchLink('foo').subscribe((next) => {
-        expect(next).toBeFalsy();
-      });
-
-      backend.expectOne('http://api.linkpreview.net/').flush(null, {status: 404, statusText: 'Not Found'});
-    })));
-
-  it(`should emit 'true' for 200 Ok`, async(inject([LinkPreviewService, HttpTestingController],
-    (service: LinkPreviewService, backend: HttpTestingController) => {
-      service.fetchLink('github.com').subscribe((next) => {
-        expect(next).toBeTruthy();
-      });
-
-      backend.expectOne('http://api.linkpreview.net/').flush(null, {status: 200, statusText: 'Ok'});
-    })));
+  // it(`should emit 'false' for 404 not found`, async(inject([LinkPreviewService, HttpTestingController],
+  //   (service: LinkPreviewService, backend: HttpTestingController) => {
+  //     service.fetchLink('foo').subscribe((next) => {
+  //       expect(next).toBeFalsy();
+  //     });
+  //
+  //     backend.expectOne('http://api.linkpreview.net/').flush(null, {status: 404, statusText: 'Not Found'});
+  //   })));
+  //
+  // it(`should emit 'true' for 200 Ok`, async(inject([LinkPreviewService, HttpTestingController],
+  //   (service: LinkPreviewService, backend: HttpTestingController) => {
+  //     service.fetchLink('github.com').subscribe((next) => {
+  //       expect(next).toBeTruthy();
+  //     });
+  //
+  //     backend.expectOne('http://api.linkpreview.net/').flush(null, {status: 200, statusText: 'Ok'});
+  //   })));
 });

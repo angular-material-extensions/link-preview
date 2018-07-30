@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {  LibModule  } from '@angular-material-extensions/link-preview';
+import {  MatLinkPreviewModule  } from '@angular-material-extensions/link-preview';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
@@ -8,7 +8,7 @@ import { HomeComponent } from './home.component';
 @NgModule({
     imports: [
         CommonModule,
-        LibModule.forRoot(),
+        MatLinkPreviewModule.forRoot(),
         HomeRoutingModule,
     ],
     declarations: [HomeComponent],
