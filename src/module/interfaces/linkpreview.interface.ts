@@ -1,4 +1,4 @@
-export interface LinkpreviewIntreface {
+export interface LinkPreview {
   title: string;
   description: string;
   image: string;

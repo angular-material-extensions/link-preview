@@ -9,7 +9,7 @@ import {MatCardModule} from '@angular/material';
 import {MatLinkPreviewDirective} from './directives/mat-link-preview.directive';
 
 // Export module's public API
-export {LinkpreviewIntreface} from './interfaces/linkpreview.intreface'
+export {LinkPreview} from './interfaces/linkpreview.interface'
 export {LinkPreviewComponent} from './components/link-preview.component';
 export {MatLinkPreviewDirective} from './directives/mat-link-preview.directive';
 export {LinkPreviewService} from './service/link-preview.service';
