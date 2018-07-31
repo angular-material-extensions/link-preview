@@ -1,0 +1,12 @@
+<div *ngIf="this.linkPreview; then render else loading"></div>
+
+<ng-template #render>
+  <mat-card>
+    <img mat-card-image [src]="linkPreview.image">
+    <mat-card-title>{{linkPreview.title}}</mat-card-title>
+    <mat-card-subtitle>{{linkPreview.description}}</mat-card-subtitle>
+  </mat-card>
+</ng-template>
+<ng-template #loading>
+  <mat-progress-bar *ngIf="false" mode="indeterminate"></mat-progress-bar>
+</ng-template>

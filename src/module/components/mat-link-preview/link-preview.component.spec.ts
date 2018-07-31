@@ -22,7 +22,7 @@ describe('LinkPreviewComponent', function () {
   beforeEach(() => {
     fixture = TestBed.createComponent(LinkPreviewComponent);
     comp = fixture.componentInstance;
-    de = fixture.debugElement.query(By.css('p.description'));
+    // de = fixture.debugElement.query(By.css('p.description'));
   });
 
   it('should create components', () => expect(comp).toBeDefined());
