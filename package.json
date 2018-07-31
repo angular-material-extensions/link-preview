@@ -32,12 +32,12 @@
     "check-travis": " travis-status --repo=angular-material-extensions/link-preview --branch=master --fail-pending || echo 'Not yet passing'"
   },
   "dependencies": {
-    "@angular/cdk": "^6.4.1",
+    "@angular/cdk": "^6.4.2",
     "@angular/common": "^6.1.0",
     "@angular/core": "^6.1.0",
     "@angular/flex-layout": "^6.0.0-beta.17",
     "@angular/http": "^6.1.0",
-    "@angular/material": "^6.4.1",
+    "@angular/material": "^6.4.2",
     "@angular/platform-browser": "^6.1.0",
     "ngx-linkifyjs": "^1.0.0"
   },
