@@ -6,10 +6,10 @@ import {LinkPreviewService} from '../../..';
 
 @Component({
   selector: 'mat-link-preview',
-  templateUrl: './link-preview.component.html',
-  styleUrls: ['./link-preview.component.scss']
+  templateUrl: './mat-link-preview.component.html',
+  styleUrls: ['./mat-link-preview.component.scss']
 })
-export class LinkPreviewComponent implements OnInit, OnDestroy {
+export class MatLinkPreviewComponent implements OnInit, OnDestroy {
 
   @Input() link: Link;
   linkPreview: LinkPreview;

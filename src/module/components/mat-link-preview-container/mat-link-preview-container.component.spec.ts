@@ -1,10 +1,9 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-
-import {MatLinkPreviewContainerComponent} from './mat-link-preview-container.component';
-import {MatProgressBarModule} from '@angular/material';
-import {LinkPreviewService} from '../../..';
-import {Link} from 'ngx-linkifyjs';
 import {EventEmitter} from '@angular/core';
+import {Link} from 'ngx-linkifyjs';
+import {MatLinkPreviewContainerComponent} from './mat-link-preview-container.component';
+import {LinkPreviewService, MatLinkPreviewComponent} from '../../..';
+import {MatLinkPreviewModule} from '../../../../dist';
 
 describe('MatLinkPreviewContainerComponent', () => {
   let component: MatLinkPreviewContainerComponent;
@@ -15,7 +14,7 @@ describe('MatLinkPreviewContainerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [MatProgressBarModule],
+      imports: [MatLinkPreviewModule],
       declarations: [MatLinkPreviewContainerComponent],
       providers: [{provide: LinkPreviewService, useValue: linkPreviewServicePartial}]
     })
