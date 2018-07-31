@@ -1,10 +1,10 @@
-import {async, fakeAsync, inject, TestBed} from '@angular/core/testing';
+import {async, inject, TestBed} from '@angular/core/testing';
 
-import {LinkPreviewService} from './link-preview.service';
-import {HttpClientModule, HttpParams, HttpRequest} from '@angular/common/http';
+import {MatLinkPreviewService} from './mat-link-preview.service';
+import {HttpClientModule, HttpRequest} from '@angular/common/http';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 
-describe('LinkPreviewService', () => {
+describe('MatLinkPreviewService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -13,7 +13,7 @@ describe('LinkPreviewService', () => {
         HttpClientTestingModule],
       providers:
         [
-          LinkPreviewService
+          MatLinkPreviewService
         ]
     });
   });
@@ -22,12 +22,12 @@ describe('LinkPreviewService', () => {
     backend.verify();
   }));
 
-  it('should create service', inject([LinkPreviewService], (service: LinkPreviewService) => {
+  it('should create service', inject([MatLinkPreviewService], (service: MatLinkPreviewService) => {
     expect(service).toBeTruthy();
   }));
 
-  it(`should send an expected request`, async(inject([LinkPreviewService, HttpTestingController],
-    (service: LinkPreviewService, backend: HttpTestingController) => {
+  it(`should send an expected request`, async(inject([MatLinkPreviewService, HttpTestingController],
+    (service: MatLinkPreviewService, backend: HttpTestingController) => {
       service.fetchLink('github.com').subscribe();
 
       backend.expectOne((req: HttpRequest<any>) => {

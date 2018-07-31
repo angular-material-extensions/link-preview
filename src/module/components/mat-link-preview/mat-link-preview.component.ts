@@ -1,8 +1,7 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs/internal/Subscription';
 import {Link} from 'ngx-linkifyjs';
-import {LinkPreview} from '../../..';
-import {LinkPreviewService} from '../../..';
+import {LinkPreview, MatLinkPreviewService} from '../../..';
 
 @Component({
   selector: 'mat-link-preview',
@@ -16,7 +15,7 @@ export class MatLinkPreviewComponent implements OnInit, OnDestroy {
   loaded: boolean;
   private _subscription: Subscription;
 
-  constructor(public linkPreviewService: LinkPreviewService) {
+  constructor(public linkPreviewService: MatLinkPreviewService) {
   }
 
   ngOnInit(): void {

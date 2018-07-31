@@ -1,7 +1,7 @@
 import {CommonModule} from '@angular/common';
-import {NgModule, ModuleWithProviders} from '@angular/core';
+import {ModuleWithProviders, NgModule} from '@angular/core';
 
-import {LinkPreviewService} from './service/link-preview.service';
+import {MatLinkPreviewService} from './service/mat-link-preview.service';
 import {NgxLinkifyjsModule, NgxLinkifyjsService} from 'ngx-linkifyjs';
 import {HttpClientModule} from '@angular/common/http';
 import {MatCardModule, MatProgressBarModule} from '@angular/material';
@@ -14,7 +14,7 @@ export {LinkPreview} from './interfaces/linkpreview.interface'
 export {MatLinkPreviewComponent} from './components/mat-link-preview/mat-link-preview.component';
 export {MatLinkPreviewContainerComponent} from './components/mat-link-preview-container/mat-link-preview-container.component';
 export {MatLinkPreviewDirective} from './directives/mat-link-preview.directive';
-export {LinkPreviewService} from './service/link-preview.service';
+export {MatLinkPreviewService} from './service/mat-link-preview.service';
 
 @NgModule({
   imports: [
@@ -31,7 +31,7 @@ export class MatLinkPreviewModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: MatLinkPreviewModule,
-      providers: [LinkPreviewService, NgxLinkifyjsService]
+      providers: [MatLinkPreviewService, NgxLinkifyjsService]
     };
   }
 }

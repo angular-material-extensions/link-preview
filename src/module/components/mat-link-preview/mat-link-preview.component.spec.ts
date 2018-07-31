@@ -5,14 +5,14 @@ import {DebugElement, EventEmitter} from '@angular/core';
 import {MatLinkPreviewComponent} from './mat-link-preview.component';
 import {MatCardModule, MatProgressBarModule} from '@angular/material';
 import {FormsModule} from '@angular/forms';
-import {LinkPreviewService} from '../../../index';
+import {MatLinkPreviewService} from '../../../index';
 import {Link} from 'ngx-linkifyjs';
 
 describe('LinkPreviewComponent', function () {
   let de: DebugElement;
   let comp: MatLinkPreviewComponent;
   let fixture: ComponentFixture<MatLinkPreviewComponent>;
-  const linkPreviewServicePartial: Partial<LinkPreviewService> = {
+  const linkPreviewServicePartial: Partial<MatLinkPreviewService> = {
     onLinkFound: new EventEmitter<Array<Link>>()
   };
 
@@ -20,7 +20,7 @@ describe('LinkPreviewComponent', function () {
     TestBed.configureTestingModule({
       imports: [MatCardModule, MatProgressBarModule, FormsModule],
       declarations: [MatLinkPreviewComponent],
-      providers: [{provide: LinkPreviewService, useValue: linkPreviewServicePartial}]
+      providers: [{provide: MatLinkPreviewService, useValue: linkPreviewServicePartial}]
     })
       .compileComponents();
   }));

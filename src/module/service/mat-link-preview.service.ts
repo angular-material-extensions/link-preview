@@ -7,7 +7,7 @@ import {Link} from 'ngx-linkifyjs';
 import {LinkPreview} from '../..';
 
 @Injectable()
-export class LinkPreviewService implements OnDestroy {
+export class MatLinkPreviewService implements OnDestroy {
 
   private _accessKey = '5b54e80a65c77848ceaa4630331e8384950e09d392365';
   private _apiURL = 'http://api.linkpreview.net/';

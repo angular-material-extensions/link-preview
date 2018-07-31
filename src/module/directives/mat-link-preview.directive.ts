@@ -2,7 +2,7 @@ import {Directive, OnInit} from '@angular/core';
 import {fromEvent} from 'rxjs';
 import {debounceTime, distinctUntilChanged, map} from 'rxjs/operators';
 import {Link, NgxLinkifyjsService} from 'ngx-linkifyjs';
-import {LinkPreviewService} from '../..';
+import {MatLinkPreviewService} from '../..';
 
 @Directive({
   selector: '[matLinkPreview]'
@@ -10,7 +10,7 @@ import {LinkPreviewService} from '../..';
 export class MatLinkPreviewDirective implements OnInit {
 
   constructor(public linkifyService: NgxLinkifyjsService,
-              public linkPreviewService: LinkPreviewService) {
+              public linkPreviewService: MatLinkPreviewService) {
   }
 
   ngOnInit(): void {

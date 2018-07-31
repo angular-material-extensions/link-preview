@@ -2,13 +2,13 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {EventEmitter} from '@angular/core';
 import {Link} from 'ngx-linkifyjs';
 import {MatLinkPreviewContainerComponent} from './mat-link-preview-container.component';
-import {LinkPreviewService, MatLinkPreviewComponent} from '../../..';
+import {MatLinkPreviewService, MatLinkPreviewComponent} from '../../..';
 import {MatLinkPreviewModule} from '../../../../dist';
 
 describe('MatLinkPreviewContainerComponent', () => {
   let component: MatLinkPreviewContainerComponent;
   let fixture: ComponentFixture<MatLinkPreviewContainerComponent>;
-  const linkPreviewServicePartial: Partial<LinkPreviewService> = {
+  const linkPreviewServicePartial: Partial<MatLinkPreviewService> = {
     onLinkFound: new EventEmitter<Array<Link>>()
   };
 
@@ -16,7 +16,7 @@ describe('MatLinkPreviewContainerComponent', () => {
     TestBed.configureTestingModule({
       imports: [MatLinkPreviewModule],
       declarations: [MatLinkPreviewContainerComponent],
-      providers: [{provide: LinkPreviewService, useValue: linkPreviewServicePartial}]
+      providers: [{provide: MatLinkPreviewService, useValue: linkPreviewServicePartial}]
     })
       .compileComponents();
   }));
