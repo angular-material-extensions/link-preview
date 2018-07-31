@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
-import {LinkPreviewService} from '@angular-material-extensions/link-preview';
+import {LinkPreview, MatLinkPreviewService} from '@angular-material-extensions/link-preview';
 import sdk from '@stackblitz/sdk';
 
 @Component({
@@ -10,8 +10,15 @@ import sdk from '@stackblitz/sdk';
 })
 export class HomeComponent implements OnInit {
 
+  linkExample: LinkPreview = {
+    title: 'Google',
+    description: 'Search webpages, images, videos and more.',
+    image: 'https:\/\/www.google.com\/images\/logo.png',
+    url: 'https:\/\/www.google.com'
+  };
+
   constructor(private titleService: Title,
-              public linkPreviewService: LinkPreviewService) {
+              public linkPreviewService: MatLinkPreviewService) {
   }
 
   ngOnInit() {

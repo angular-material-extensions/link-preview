@@ -11,7 +11,7 @@ import {LinkPreview, MatLinkPreviewService} from '../../..';
 export class MatLinkPreviewComponent implements OnInit, OnDestroy {
 
   @Input() link: Link;
-  linkPreview: LinkPreview;
+  @Input() linkPreview: LinkPreview;
   loaded: boolean;
   private _subscription: Subscription;
 
@@ -19,13 +19,15 @@ export class MatLinkPreviewComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.loaded = false;
-    this._subscription = this.linkPreviewService
-      .fetchLink(this.link.href)
-      .subscribe(value => {
-        this.linkPreview = value;
-        this.loaded = true;
-      });
+    if (this.link && !this.linkPreview) {
+      this.loaded = false;
+      this._subscription = this.linkPreviewService
+        .fetchLink(this.link.href)
+        .subscribe(value => {
+          this.linkPreview = value;
+          this.loaded = true;
+        });
+    }
   }
 
   ngOnDestroy(): void {
