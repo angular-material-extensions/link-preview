@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-// import {MatLinkPreviewService} from '../../..';
 import {Link} from 'ngx-linkifyjs';
+import {MatLinkPreviewService} from '../../service/mat-link-preview.service';
 
 @Component({
   selector: 'mat-link-preview-container',
@@ -9,6 +9,8 @@ import {Link} from 'ngx-linkifyjs';
 })
 export class MatLinkPreviewContainerComponent implements OnInit {
 
+  constructor(public linkPreviewService: MatLinkPreviewService) {
+  }
 
 
   ngOnInit() {
