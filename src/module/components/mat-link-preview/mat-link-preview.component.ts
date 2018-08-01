@@ -1,7 +1,8 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs/internal/Subscription';
 import {Link} from 'ngx-linkifyjs';
-import {LinkPreview, MatLinkPreviewService} from '../../..';
+import {LinkPreview} from '../../interfaces/linkpreview.interface';
+import {MatLinkPreviewService} from '../../service/mat-link-preview.service';
 
 @Component({
   selector: 'mat-link-preview',

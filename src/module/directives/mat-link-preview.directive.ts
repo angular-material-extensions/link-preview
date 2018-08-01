@@ -2,7 +2,7 @@ import {Directive, OnInit} from '@angular/core';
 import {fromEvent} from 'rxjs';
 import {debounceTime, distinctUntilChanged, map} from 'rxjs/operators';
 import {Link, NgxLinkifyjsService} from 'ngx-linkifyjs';
-import {MatLinkPreviewService} from '../..';
+import {MatLinkPreviewService} from '../../module/service/mat-link-preview.service';
 
 @Directive({
   selector: '[matLinkPreview]'
