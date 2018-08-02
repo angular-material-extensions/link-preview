@@ -1,12 +1,13 @@
 <p align="center">
   <img alt="angular-material-extensions's logo"
    height="256px" width="256px" style="text-align: center;" 
-   src="https://cdn.rawgit.com/angular-material-extensions/link-preview/master/assets/angular-material-extensions-logo.svg">
+   src="https://cdn.rawgit.com/angular-material-extensions/link-preview/master/assets/angular-material-extensions-logo.png">
 </p>
 
 # @angular-material-extensions/link-preview - Angular open source UI library to preview web links powered by ngx-linkifyjs and material design
 
 [![npm version](https://badge.fury.io/js/%40angular-material-extensions%2Flink-preview.svg)](https://badge.fury.io/js/%40angular-material-extensions%2Flink-preview)
+[![npm demo](https://img.shields.io/badge/demo-online-ed1c46.svg)](https://angular-material-extensions.github.io/link-preview)
 [![Join the chat at https://gitter.im/angular-material-extensions/Lobby](https://badges.gitter.im/angular-material-extensions/Lobby.svg)](https://gitter.im/angular-material-extensions/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![CircleCI branch](https://img.shields.io/circleci/project/github/angular-material-extensions/link-preview/master.svg?label=circleci)](https://circleci.com/gh/angular-material-extensions/link-preview)
 [![Build Status](https://travis-ci.org/angular-material-extensions/link-preview.svg?branch=master)](https://travis-ci.org/angular-material-extensions/link-preview)
@@ -17,14 +18,14 @@
 [![license](https://img.shields.io/github/license/angular-material-extensions/link-preview.svg?style=flat-square)](https://github.com/angular-material-extensions/link-preview/blob/master/LICENSE)
 
 <p align="center">
-  <img alt="ngx-linkifyjs demo" width="320px" style="text-align: center;" 
+  <img alt="ngx-linkifyjs demo" width="500px" style="text-align: center;" 
   src="https://cdn.rawgit.com/angular-material-extensions/link-preview/master/assets/demo1.gif">
 </p>
 
 multiple link preview
 
 <p align="center">
-  <img alt="ngx-linkifyjs demo" width="320px" style="text-align: center;" 
+  <img alt="ngx-linkifyjs demo" width="70%" style="text-align: center;" 
   src="https://cdn.rawgit.com/angular-material-extensions/link-preview/master/assets/demo.png">
 </p>
 
