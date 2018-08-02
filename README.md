@@ -71,7 +71,7 @@ View all the directives and components in action at [https://angular-material-ex
 - [angular material theme](https://material.angular.io/guide/getting-started#step-4-include-a-theme)
 
 ```bash
-npm i @angular/cdk @angular/material @angular/animations @angular/forms 
+npm i @angular/cdk @angular/material @angular/animations @angular/http 
 ```
 
 or use `angular schematics` like e.g:
