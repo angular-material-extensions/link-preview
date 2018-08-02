@@ -18,14 +18,14 @@
 [![license](https://img.shields.io/github/license/angular-material-extensions/link-preview.svg?style=flat-square)](https://github.com/angular-material-extensions/link-preview/blob/master/LICENSE)
 
 <p align="center">
-  <img alt="ngx-linkifyjs demo" width="500px" style="text-align: center;" 
+  <img alt="@angular-material-extensions/link-preview demo" width="500px" style="text-align: center;" 
   src="https://cdn.rawgit.com/angular-material-extensions/link-preview/master/assets/demo1.gif">
 </p>
 
 multiple link preview
 
 <p align="center">
-  <img alt="ngx-linkifyjs demo" width="70%" style="text-align: center;" 
+  <img alt="@angular-material-extensions/link-preview demo with multiple preview" width="70%" style="text-align: center;" 
   src="https://cdn.rawgit.com/angular-material-extensions/link-preview/master/assets/demo.png">
 </p>
 
