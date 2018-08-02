@@ -355,10 +355,10 @@ gulp.task('rollup-bundle', (cb) => {
         // Angular dependencies
         '@angular/core': 'ng.core',
         '@angular/common': 'ng.common',
+        '@angular/animations': 'ng.animations',
         '@angular/http': 'ng.http',
         '@angular/cdk': 'ng.cdk',
         '@angular/material': 'ng.material',
-        '@angular/flex-layout': 'ng.flex-layout',
         '@angular/platform-browser': 'ng.platform-browser',
 
         // Rxjs dependencies
@@ -386,6 +386,7 @@ gulp.task('rollup-bundle', (cb) => {
         // Add any other dependency or peer dependency of your library here
         // This is required for UMD bundle users.
         // See https://github.com/tinesoft/generator-ngx-library/TROUBLESHOUTING.md if trouble
+        'ngx-linkifyjs': _.camelCase('ngx-linkifyjs'.replace('/', '.')),
 
 
       };
