@@ -1,5 +1,4 @@
 import {NgModule} from '@angular/core';
-import {HttpModule} from '@angular/http';
 import {FormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 import {TransferHttpCacheModule} from '@nguniversal/common';
@@ -9,6 +8,8 @@ import {AppSharedModule} from './shared/shared.module';
 import {HomeModule} from './home/home.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {MarkdownModule} from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -19,10 +20,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     // The application ID can be any identifier which is unique on
     // the page.
     BrowserModule.withServerTransition({appId: '@angular-material-extensions/link-preview-demo-id'}),
+    MarkdownModule.forRoot({loader: HttpClient}),
     TransferHttpCacheModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     AppRoutingModule,
     AppSharedModule,
     HomeModule
