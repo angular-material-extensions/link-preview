@@ -10,7 +10,7 @@ import {LinkPreview} from '../..';
 export class MatLinkPreviewService implements OnDestroy {
 
   private _accessKey = '5b54e80a65c77848ceaa4630331e8384950e09d392365';
-  private _apiURL = 'http://api.linkpreview.net/';
+  private _apiURL = 'https://api.linkpreview.net/';
   private _subscription: Subscription;
 
   onLinkFound: EventEmitter<Array<Link>> = new EventEmitter<Array<Link>>();

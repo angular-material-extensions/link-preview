@@ -33,7 +33,7 @@ describe('MatLinkPreviewService', () => {
       backend.expectOne((req: HttpRequest<any>) => {
         const params = req.params;
 
-        return req.url === 'http://api.linkpreview.net/'
+        return req.url === 'https://api.linkpreview.net/'
           && req.method === 'GET'
           && params.get('key') === '5b54e80a65c77848ceaa4630331e8384950e09d392365'
           && params.get('q') === 'github.com';
