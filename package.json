@@ -1,7 +1,7 @@
 {
   "name": "@angular-material-extensions/link-preview",
   "description": "Angular open source UI library to preview web links",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "homepage": "https://github.com/angular-material-extensions/link-preview",
   "author": {
     "name": "Anthony Nahas",
