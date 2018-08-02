@@ -5,11 +5,13 @@ import {MatLinkPreviewModule} from '@angular-material-extensions/link-preview';
 import {HomeRoutingModule} from './home-routing.module';
 import {HomeComponent} from './home.component';
 import {MatInputModule} from '@angular/material';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   imports: [
     CommonModule,
     MatLinkPreviewModule.forRoot(),
+    FlexLayoutModule,
     HomeRoutingModule,
     MatInputModule,
   ],

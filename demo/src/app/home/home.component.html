@@ -23,22 +23,18 @@
 </div>
 
 <section class="home">
-  <div class="container">
-    <!-- put your content here-->
+  <div class="container" fxFlex.xs="100" fxFlex.sm="70" fxFlex="50">
+    <div fxLayout="column" fxLayoutAlign="center">
 
-    <div class="mx-auto">
-      <mat-link-preview [linkPreview]="linkExample"></mat-link-preview>
+      <mat-form-field class="demo-full-width" appearance="outline">
+        <mat-label>Enter here your text here with few links to preview ;)</mat-label>
+        <textarea matInput matTextareaAutosize matLinkPreview minRows="6"></textarea>
+        <mat-link-preview-container [multiple]="true" color=""></mat-link-preview-container>
+      </mat-form-field>
+
+      <!--<mat-link-preview [linkPreview]="linkExample"></mat-link-preview>-->
+
+      <p>Happy ng-hacking!</p>
     </div>
-
-    <mat-form-field class="demo-full-width">
-      <mat-label>Address 2</mat-label>
-      <textarea matInput matLinkPreview></textarea>
-    </mat-form-field>
-
-    <div>
-      <mat-link-preview-container></mat-link-preview-container>
-    </div>
-
-    <p>Happy ng-hacking!</p>
   </div>
 </section>
