@@ -1,8 +1,10 @@
 <p align="center">
-  <img height="256px" width="256px" style="text-align: center;" src="https://cdn.rawgit.com/angular-material-extensions/link-preview/master/demo/src/assets/logo.svg">
+  <img alt="angular-material-extensions's logo"
+   height="256px" width="256px" style="text-align: center;" 
+   src="https://cdn.rawgit.com/angular-material-extensions/link-preview/master/assets/angular-material-extensions-logo.svg">
 </p>
 
-# link-preview - Angular open source UI library to preview web links
+# @angular-material-extensions/link-preview - Angular open source UI library to preview web links powered by ngx-linkifyjs and material design
 
 [![npm version](https://badge.fury.io/js/%40angular-material-extensions%2Flink-preview.svg)](https://badge.fury.io/js/%40angular-material-extensions%2Flink-preview)
 [![Join the chat at https://gitter.im/angular-material-extensions/Lobby](https://badges.gitter.im/angular-material-extensions/Lobby.svg)](https://gitter.im/angular-material-extensions/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -14,12 +16,76 @@
 [![Greenkeeper Badge](https://badges.greenkeeper.io/angular-material-extensions/link-preview.svg)](https://greenkeeper.io/)
 [![license](https://img.shields.io/github/license/angular-material-extensions/link-preview.svg?style=flat-square)](https://github.com/angular-material-extensions/link-preview/blob/master/LICENSE)
 
-## Demo
+<p align="center">
+  <img alt="ngx-linkifyjs demo" width="320px" style="text-align: center;" 
+  src="https://cdn.rawgit.com/angular-material-extensions/link-preview/master/assets/demo1.gif">
+</p>
 
-View all the directives in action at https://angular-material-extensions.github.io/link-preview
+multiple link preview
+
+<p align="center">
+  <img alt="ngx-linkifyjs demo" width="320px" style="text-align: center;" 
+  src="https://cdn.rawgit.com/angular-material-extensions/link-preview/master/assets/demo.png">
+</p>
+
+
+## Built by and for developers :heart:
+Do you have any question or suggestion ? Please do not hesitate to contact us!
+Alternatively, provide a PR | open an appropriate issue [here](https://github.com/angular-material-extensions/link-preview/issues)
+
+If did you like this project, support [angular-material-extensions](https://github.com/angular-material-extensions) 
+by starring :star: and sharing it :loudspeaker:
+
+## Table of Contents
+- [Demo](#demo)
+- [Dependencies](#dependencies)
+- [Peer Dependencies](#peerDependencies)
+- [Additional Requirements - material (Include a theme)](#additional-requirements-material-theme)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Documentation](#documentation)
+- [Run Demo App Locally](#run-demo-app-locally)
+- [Development](#development)
+- [Other Angular Libraries](#other-angular-libraries)
+- [Support](#support)
+- [License](#license)
+
+<a name="demo"/>
+
+## [Demo](https://angular-material-extensions.github.io/link-preview)
+
+View all the directives and components in action at [https://angular-material-extensions.github.io/link-preview](https://angular-material-extensions.github.io/link-preview)
+
+<a name="dependencies"/>
 
 ## Dependencies
-* [Angular](https://angular.io) (*requires* Angular 2 or higher, tested with 2.0.0)
+* [Angular](https://angular.io) (*requires* Angular 2 or higher, tested with V6)
+
+<a name="peerDependencies"/>
+
+## Requirements (peer dependencies):
+- [angular animations v6.1.0](https://www.npmjs.com/package/@angular/animations)
+- [angular http v6.1.0](https://www.npmjs.com/package/@angular/http)
+- [angular cdk v6.4.2](https://www.npmjs.com/package/@angular/cdk)
+- [angular material v6.4.2](https://www.npmjs.com/package/@angular/material)
+- [angular material theme](https://material.angular.io/guide/getting-started#step-4-include-a-theme)
+
+```bash
+npm i @angular/cdk @angular/material @angular/animations @angular/forms 
+```
+
+or use `angular schematics` like e.g:
+
+```bash
+ng add @angular/material 
+```
+
+---
+
+<a name="additional-requirements-material-theme"/>
+
+### Additional requirements Theme (Material Design)
+- [angular material theme](https://material.angular.io/guide/getting-started#step-4-include-a-theme)
 
 ## Installation
 Install above dependencies via *npm*. 
@@ -42,30 +108,30 @@ map: {
 
 Once installed you need to import the main module:
 ```js
-import { LibModule } from '@angular-material-extensions/link-preview';
+import { MatLinkPreviewModule } from '@angular-material-extensions/link-preview';
 ```
 The only remaining part is to list the imported module in your application module. The exact method will be slightly
-different for the root (top-level) module for which you should end up with the code similar to (notice ` LibModule .forRoot()`):
+different for the root (top-level) module for which you should end up with the code similar to (notice ` MatLinkPreviewModule .forRoot()`):
 ```js
-import { LibModule } from '@angular-material-extensions/link-preview';
+import { MatLinkPreviewModule } from '@angular-material-extensions/link-preview';
 
 @NgModule({
   declarations: [AppComponent, ...],
-  imports: [LibModule.forRoot(), ...],  
+  imports: [MatLinkPreviewModule.forRoot(), ...],  
   bootstrap: [AppComponent]
 })
 export class AppModule {
 }
 ```
 
-Other modules in your application can simply import ` LibModule `:
+Other modules in your application can simply import ` MatLinkPreviewModule `:
 
 ```js
-import { LibModule } from '@angular-material-extensions/link-preview';
+import { MatLinkPreviewModule } from '@angular-material-extensions/link-preview';
 
 @NgModule({
   declarations: [OtherComponent, ...],
-  imports: [LibModule, ...], 
+  imports: [MatLinkPreviewModule, ...], 
 })
 export class OtherModule {
 }
@@ -73,7 +139,150 @@ export class OtherModule {
 
 ## Usage
 
+### Directives
 
+#### `matLinkPreview` used to find and parse links from any text input - should be used in combination with `<mat-link-preview-container>` to render and preview the found links
+
+e.g:
+
+```html
+<mat-form-field class="demo-full-width" appearance="outline">
+  <mat-label>Enter here your text here with few links to preview ;)</mat-label>
+  <textarea matInput matTextareaAutosize matLinkPreview minRows="6"></textarea>
+</mat-form-field>
+```
+
+### Components
+
+#### `<mat-link-preview-container>` the container that hold the links to preview
+
+| option             | bind     |  type  |   default    | description  |
+|:-------------------|:--------:|:------:|:------------:|:-------------------------------------------------------------------------------------------------|    
+| color               | `Input()`  | `string`     |   `primary`  | the color to use for the <a> button of the url - options --> `primary | accent | warn`
+| multiple            | `Input()`  | `boolean`    |   `false`   | whether to find, parse and render one single or multiple links
+| showLoadingsProgress| `Input()`  | `boolean`    |   `true`    | whether to show and render a loading spinner while fetching the link to preview
+
+e.g:
+
+```html
+<mat-link-preview-container color="primary" [multiple]="true"></mat-link-preview-container>
+```
+
+#### Full example code
+
+```html
+<div class="container" fxFlex.xs="100" fxFlex.sm="70" fxFlex="50">
+    <div fxLayout="column" fxLayoutAlign="center">
+
+     <!-- here -->
+      <mat-form-field class="demo-full-width" appearance="outline">
+        <mat-label>Enter here your text here with few links to preview ;)</mat-label>
+        <textarea matInput matTextareaAutosize matLinkPreview minRows="6"></textarea>
+        <mat-link-preview-container [multiple]="true"></mat-link-preview-container>
+      </mat-form-field>
+      <!-- #### -->
+      
+    </div>
+</div>
+```
+
+--- 
+
+<a name="documentation"/>
+
+## [Documentation](https://angular-material-extensions.github.io/link-preview/doc/index.html)
+
+Please checkout the full documentation [here](https://angular-material-extensions.github.io/link-preview/doc/index.html) 
+
+
+<a name="run-demo-app-locally"/>
+
+## Run Demo App Locally
+
+- [clone this repo](https://github.com/angular-material-extensions/link-preview.git) by running
+```bash
+$ git clone https://github.com/angular-material-extensions/link-preview.git
+```
+
+- link the **@angular-material-extensions/link-preview** package
+
+```bash
+$ gulp link
+```
+
+- navigate to the demo app directory
+```bash
+$ cd demo
+```
+
+- install the dependencies
+```bash
+$ npm i
+```
+
+- run/start/serve the app
+```bash
+$ npm run start
+```
+or
+```bash
+$ ng serve --open
+```
+- the app is now hosted by `http://localhost:4200/`
+
+
+<a name="development"/>
+
+## Development
+
+1. clone this [repo](https://github.com/angular-material-extensions/link-preview.git)
+2. Install the dependencies by running `npm i`
+3. build the library `npm run build` or `gulp build`
+To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
+
+```bash
+$ npm run build
+```
+
+4. Link the library 
+  - on windows `gulp link` or locally `npx gulp link`
+  - on mac/linux `sudo gulp link` or locally `sudo npx gulp link`
+  
+ 5. Navigate to the demo app's directory
+  - `cd demo`
+  _ `npm i`
+  _ `npm start`
+
+
+
+<a name="other-angular-libraries"/>
+
+## Other Angular Libraries
+- [ngx-auth-firebaseui](https://github.com/AnthonyNahas/ngx-auth-firebaseui)
+- [ngx-linkifyjs](https://github.com/AnthonyNahas/ngx-linkifyjs)
+- [@angular-material-extensions/password-strength](https://github.com/angular-material-extensions/password-strength)
+- [@angular-material-extensions/google-maps-autocomplete](https://github.com/angular-material-extensions/google-maps-autocomplete)
+- [@angular-material-extensions/pages](https://github.com/angular-material-extensions/pages)
+- [@angular-material-extensions/contacts](https://github.com/angular-material-extensions/contacts)
+- [@angular-material-extensions/faq](https://github.com/angular-material-extensions/faq)
+- [@angular-material-extensions/cards](https://github.com/angular-material-extensions/cards)
+- [@angular-material-extensions/combination-generator](https://github.com/angular-material-extensions/combination-generator)
+
+---
+
+
+<a name="support"/>
+
+## Support
++ Drop an email to: [Anthony Nahas](mailto:anthony.na@hotmail.de)
++ or open an appropriate [issue](https://github.com/angular-material-extensions/link-preview/issues)
++ let us chat on [Gitter](https://gitter.im/angular-material-extensions/Lobby)
+ 
+ Built by and for developers :heart: we will help you :punch:
+
+---
+
+<a name="license"/>
 
 ## License
 
