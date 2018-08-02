@@ -13,6 +13,11 @@ export class MatLinkPreviewComponent implements OnInit, OnDestroy {
 
   @Input() link: Link;
   @Input() linkPreview: LinkPreview;
+
+  // forwarded from the container
+  @Input() color = 'primary'; // accent | warn
+  @Input() showLoadingsProgress = true;
+
   loaded: boolean;
   private _subscription: Subscription;
 

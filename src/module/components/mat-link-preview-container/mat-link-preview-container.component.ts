@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Link} from 'ngx-linkifyjs';
 import {MatLinkPreviewService} from '../../service/mat-link-preview.service';
 
@@ -7,13 +7,14 @@ import {MatLinkPreviewService} from '../../service/mat-link-preview.service';
   templateUrl: './mat-link-preview-container.component.html',
   styleUrls: ['./mat-link-preview-container.component.scss']
 })
-export class MatLinkPreviewContainerComponent implements OnInit {
+export class MatLinkPreviewContainerComponent {
+
+  // to forward
+  @Input() color = 'primary'; // accent | warn
+  @Input() multiple: boolean;
+  @Input() showLoadingsProgress = true;
 
   constructor(public linkPreviewService: MatLinkPreviewService) {
-  }
-
-
-  ngOnInit() {
   }
 
   trackLinks(index: number, link: Link) {

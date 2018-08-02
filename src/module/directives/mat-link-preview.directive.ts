@@ -27,6 +27,7 @@ export class MatLinkPreviewDirective implements OnInit {
           const links: Link[] = this.linkifyService.find(data);
           console.log('data: ', data);
           console.log('links: ', links);
+          // event.target['value'] = this.linkifyService.linkify(data);
           return links;
         })).subscribe((links) => {
       this.linkPreviewService.onLinkFound.emit(links);

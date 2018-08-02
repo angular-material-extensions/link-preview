@@ -4,7 +4,7 @@ import {ModuleWithProviders, NgModule} from '@angular/core';
 import {MatLinkPreviewService} from './service/mat-link-preview.service';
 import {NgxLinkifyjsModule, NgxLinkifyjsService} from 'ngx-linkifyjs';
 import {HttpClientModule} from '@angular/common/http';
-import {MatCardModule, MatProgressBarModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatProgressSpinnerModule} from '@angular/material';
 import {MatLinkPreviewDirective} from './directives/mat-link-preview.directive';
 import {MatLinkPreviewComponent} from './components/mat-link-preview/mat-link-preview.component';
 import {MatLinkPreviewContainerComponent} from './components/mat-link-preview-container/mat-link-preview-container.component';
@@ -22,7 +22,8 @@ export {MatLinkPreviewService} from './service/mat-link-preview.service';
     HttpClientModule,
     NgxLinkifyjsModule,
     MatCardModule,
-    MatProgressBarModule
+    MatButtonModule,
+    MatProgressSpinnerModule,
   ],
   exports: [MatLinkPreviewComponent, MatLinkPreviewContainerComponent, MatLinkPreviewDirective],
   declarations: [MatLinkPreviewComponent, MatLinkPreviewContainerComponent, MatLinkPreviewDirective]

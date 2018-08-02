@@ -1,12 +1,15 @@
-<div *ngIf="this.linkPreview; then render else loading"></div>
-
-<ng-template #render>
-  <mat-card>
-    <img mat-card-image-xs [src]="linkPreview.image">
-    <mat-card-title>{{linkPreview.title}}</mat-card-title>
-    <mat-card-subtitle>{{linkPreview.description}}</mat-card-subtitle>
-  </mat-card>
-</ng-template>
-<ng-template #loading>
-  <mat-progress-bar *ngIf="false" mode="indeterminate"></mat-progress-bar>
-</ng-template>
+<div class="center-auto" *ngIf="!this.linkPreview && !this.loaded && this.showLoadingsProgress">
+  <mat-spinner></mat-spinner>
+</div>
+<mat-card>
+  <mat-card-content>
+    <div class="img-container">
+      <img mat-card-image [src]="linkPreview?.image">
+    </div>
+    <div>
+      <mat-card-title>{{linkPreview?.title}}</mat-card-title>
+      <mat-card-subtitle>{{linkPreview?.description}}</mat-card-subtitle>
+      <a [href]="linkPreview?.url" mat-button [color]="color">{{linkPreview?.url}}</a>
+    </div>
+  </mat-card-content>
+</mat-card>

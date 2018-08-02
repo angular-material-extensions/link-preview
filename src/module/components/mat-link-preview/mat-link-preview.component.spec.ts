@@ -1,9 +1,8 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
 import {DebugElement, EventEmitter} from '@angular/core';
 
 import {MatLinkPreviewComponent} from './mat-link-preview.component';
-import {MatCardModule, MatProgressBarModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatProgressSpinnerModule} from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import {MatLinkPreviewService} from '../../../index';
 import {Link} from 'ngx-linkifyjs';
@@ -13,12 +12,13 @@ describe('LinkPreviewComponent', function () {
   let comp: MatLinkPreviewComponent;
   let fixture: ComponentFixture<MatLinkPreviewComponent>;
   const linkPreviewServicePartial: Partial<MatLinkPreviewService> = {
-    onLinkFound: new EventEmitter<Array<Link>>()
+    onLinkFound: new EventEmitter<Array<Link>>(),
+    links: []
   };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [MatCardModule, MatProgressBarModule, FormsModule],
+      imports: [MatCardModule, MatProgressSpinnerModule, MatButtonModule, FormsModule],
       declarations: [MatLinkPreviewComponent],
       providers: [{provide: MatLinkPreviewService, useValue: linkPreviewServicePartial}]
     })
