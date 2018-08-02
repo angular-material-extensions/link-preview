@@ -1,5 +1,15 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/angular-material-extensions/link-preview/compare/v1.0.0...v1.0.1) (2018-08-02)
+
+
+### Bug Fixes
+
+* **package:** replaced the http with https version for the api ([6d385ee](https://github.com/angular-material-extensions/link-preview/commit/6d385ee))
+
+
+
 <a name="1.0.0"></a>
-# 1.0.0 (2018-08-02)
+# [1.0.0](https://github.com/angular-material-extensions/link-preview/compare/85e9bc0...v1.0.0) (2018-08-02)
 
 
 ### Bug Fixes
