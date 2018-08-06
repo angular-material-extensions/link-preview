@@ -1,30 +1,22 @@
-import {EventEmitter, Injectable, OnDestroy} from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Subscription} from 'rxjs/internal/Subscription';
 import {map} from 'rxjs/operators';
 import {Link} from 'ngx-linkifyjs';
 import {LinkPreview} from '../..';
 
 @Injectable()
-export class MatLinkPreviewService implements OnDestroy {
+export class MatLinkPreviewService {
 
   private _accessKey = '5b54e80a65c77848ceaa4630331e8384950e09d392365';
   private _apiURL = 'https://api.linkpreview.net/';
-  private _subscription: Subscription;
 
   onLinkFound: EventEmitter<Array<Link>> = new EventEmitter<Array<Link>>();
 
   links: Link[] = [];
 
   constructor(private http: HttpClient) {
-    this._subscription = this.onLinkFound.subscribe((links: Array<Link>) => this.links = links);
-  }
-
-  ngOnDestroy(): void {
-    if (this._subscription) {
-      this._subscription.unsubscribe();
-    }
+    this.onLinkFound.subscribe((links: Array<Link>) => this.links = links);
   }
 
   fetchLink(url: string): Observable<LinkPreview> {

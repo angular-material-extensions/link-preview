@@ -1,5 +1,5 @@
 :host {
-  display: inline-block;
+  display: block;
 }
 
 mat-card-content {
@@ -28,4 +28,9 @@ mat-card-content {
 .center-auto {
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+.cut-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

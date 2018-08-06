@@ -19,6 +19,7 @@ export class MatLinkPreviewComponent implements OnInit, OnDestroy {
   @Input() showLoadingsProgress = true;
 
   loaded: boolean;
+  hasError: boolean;
   private _subscription: Subscription;
 
   constructor(public linkPreviewService: MatLinkPreviewService) {
@@ -26,13 +27,12 @@ export class MatLinkPreviewComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     if (this.link && !this.linkPreview) {
-      this.loaded = false;
+      // this.loaded = false;
       this._subscription = this.linkPreviewService
         .fetchLink(this.link.href)
-        .subscribe(value => {
-          this.linkPreview = value;
-          this.loaded = true;
-        });
+        .subscribe(value => this.linkPreview = value,
+          error => this.hasError = true,
+          () => this.loaded = true);
     }
   }
 

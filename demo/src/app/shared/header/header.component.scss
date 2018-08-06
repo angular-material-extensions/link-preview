@@ -1,3 +1,16 @@
 .navbar {
-    background: hsla(0,0%,100%,.95)
+  background: hsla(0, 0%, 100%, .95);
+}
+
+a {
+  word-wrap: break-word;
+  white-space: inherit;
+}
+
+.cut-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 160px;
+  height: 1.2em;
+  white-space: nowrap;
 }
