@@ -1,3 +1,13 @@
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/angular-material-extensions/link-preview/compare/v1.0.1...v1.0.2) (2018-08-06)
+
+
+### Bug Fixes
+
+* **package:** added catch for fetching link and fixed broken images and content [#16](https://github.com/angular-material-extensions/link-preview/issues/16) ([9f6293c](https://github.com/angular-material-extensions/link-preview/commit/9f6293c))
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/angular-material-extensions/link-preview/compare/v1.0.0...v1.0.1) (2018-08-02)
 
