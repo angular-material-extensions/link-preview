@@ -6,6 +6,7 @@ import {MatLinkPreviewService} from '../../service/mat-link-preview.service';
 
 @Component({
   selector: 'mat-link-preview',
+  exportAs: 'matLinkPreview',
   templateUrl: './mat-link-preview.component.html',
   styleUrls: ['./mat-link-preview.component.scss']
 })

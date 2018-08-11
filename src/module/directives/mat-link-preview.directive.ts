@@ -5,7 +5,8 @@ import {Link, NgxLinkifyjsService} from 'ngx-linkifyjs';
 import {MatLinkPreviewService} from '../../module/service/mat-link-preview.service';
 
 @Directive({
-  selector: '[matLinkPreview]'
+  selector: '[matLinkPreview]',
+  exportAs: '[matLinkPreview]',
 })
 export class MatLinkPreviewDirective implements OnInit {
 
