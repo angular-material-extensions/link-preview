@@ -95,7 +95,7 @@
     "sass-loader": "^7.1.0",
     "source-map-loader": "^0.2.3",
     "to-string-loader": "^1.1.5",
-    "travis-status": "3.0.0",
+    "travis-status": "3.0.1",
     "tslint": "~5.11.0",
     "typescript": "2.7.2",
     "yargs": "12.0.1",
