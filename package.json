@@ -39,7 +39,8 @@
     "@angular/http": "^6.1.1",
     "@angular/material": "^6.4.2",
     "@angular/platform-browser": "^6.1.1",
-    "ngx-linkifyjs": "^1.0.0"
+    "ngx-linkifyjs": "^1.0.0",
+    "ngx-markdown": "^6.1.0"
   },
   "devDependencies": {
     "@angular/compiler": "^6.1.1",
