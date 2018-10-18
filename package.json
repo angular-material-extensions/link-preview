@@ -37,7 +37,7 @@
     "@angular/common": "^6.1.1",
     "@angular/core": "^6.1.1",
     "@angular/http": "^6.1.1",
-    "@angular/material": "^6.4.2",
+    "@angular/material": "^7.0.0",
     "@angular/platform-browser": "^6.1.1",
     "ngx-linkifyjs": "^1.0.0"
   },
