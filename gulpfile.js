@@ -355,6 +355,7 @@ gulp.task('rollup-bundle', (cb) => {
         // Angular dependencies
         '@angular/core': 'ng.core',
         '@angular/common': 'ng.common',
+        '@angular/common/http': 'ng.common.http',
         '@angular/animations': 'ng.animations',
         '@angular/http': 'ng.http',
         '@angular/cdk': 'ng.cdk',
