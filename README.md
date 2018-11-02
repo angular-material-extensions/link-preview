@@ -60,15 +60,16 @@ View all the directives and components in action at [https://angular-material-ex
 <a name="dependencies"/>
 
 ## Dependencies
-* [Angular](https://angular.io) (*requires* Angular 2 or higher, tested with V6)
+* [Angular](https://angular.io) (*requires* Angular 2 or higher, tested with V7)
 
 <a name="peerDependencies"/>
 
 ## Requirements (peer dependencies):
-- [angular animations v6.1.0](https://www.npmjs.com/package/@angular/animations)
-- [angular http v6.1.0](https://www.npmjs.com/package/@angular/http)
-- [angular cdk v6.4.2](https://www.npmjs.com/package/@angular/cdk)
-- [angular material v6.4.2](https://www.npmjs.com/package/@angular/material)
+- [angular animations v7.0.2](https://www.npmjs.com/package/@angular/animations)
+- [angular http v7.0.2](https://www.npmjs.com/package/@angular/http)
+- [angular cdk v7.0.2](https://www.npmjs.com/package/@angular/cdk)
+- [angular material v7.0.2](https://www.npmjs.com/package/@angular/material)
+
 - [angular material theme](https://material.angular.io/guide/getting-started#step-4-include-a-theme)
 
 ```bash
@@ -260,13 +261,13 @@ $ npm run build
 
 ## Other Angular Libraries
 - [ngx-auth-firebaseui](https://github.com/AnthonyNahas/ngx-auth-firebaseui)
+- [@firebaseui/ng-bootstrap](https://github.com/firebaseui/ng-bootstrap)
 - [ngx-linkifyjs](https://github.com/AnthonyNahas/ngx-linkifyjs)
 - [@angular-material-extensions/password-strength](https://github.com/angular-material-extensions/password-strength)
 - [@angular-material-extensions/google-maps-autocomplete](https://github.com/angular-material-extensions/google-maps-autocomplete)
 - [@angular-material-extensions/pages](https://github.com/angular-material-extensions/pages)
 - [@angular-material-extensions/contacts](https://github.com/angular-material-extensions/contacts)
 - [@angular-material-extensions/faq](https://github.com/angular-material-extensions/faq)
-- [@angular-material-extensions/cards](https://github.com/angular-material-extensions/cards)
 - [@angular-material-extensions/combination-generator](https://github.com/angular-material-extensions/combination-generator)
 
 ---
