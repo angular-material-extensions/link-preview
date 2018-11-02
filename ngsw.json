@@ -1,0 +1,53 @@
+{
+  "configVersion": 1,
+  "index": "/link-preview/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/link-preview/favicon.ico",
+        "/link-preview/index.html"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/link-preview/assets/.npmignore",
+        "/link-preview/assets/logo.svg",
+        "/link-preview/assets/md/e1.md"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/link-preview/assets/.npmignore": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "/link-preview/assets/logo.svg": "0b3394341548880427c38ed78beb990863a4e8cb",
+    "/link-preview/assets/md/e1.md": "8ec68e78365859cc4a93c378e445691a7785c597",
+    "/link-preview/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/link-preview/index.html": "e4843aaba59f519a98a0822d05f3cd4c955d17c6"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
