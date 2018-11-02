@@ -1,3 +1,13 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/angular-material-extensions/link-preview/compare/v1.0.2...v1.1.0) (2018-11-02)
+
+
+### Features
+
+* **package:** support of angular v7 ([74f7b99](https://github.com/angular-material-extensions/link-preview/commit/74f7b99))
+
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/angular-material-extensions/link-preview/compare/v1.0.1...v1.0.2) (2018-08-06)
 
