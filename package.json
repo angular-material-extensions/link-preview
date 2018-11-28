@@ -48,7 +48,7 @@
     "@angular/forms": "^7.0.4",
     "@angular/platform-browser-dynamic": "^7.0.4",
     "@angular/platform-server": "^7.0.4",
-    "@compodoc/gulp-compodoc": "0.0.9",
+    "@compodoc/gulp-compodoc": "0.0.10",
     "@types/jest": "^23.3.5",
     "@types/lodash": "^4.14.118",
     "@types/node": "^10.12.9",
