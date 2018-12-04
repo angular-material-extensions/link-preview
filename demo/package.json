@@ -63,7 +63,7 @@
     "@types/jest": "^23.3.9",
     "@types/node": "^6.14.2",
     "angular-cli-ghpages": "0.5.2",
-    "ansi-colors": "^3.2.1",
+    "ansi-colors": "^3.2.2",
     "codelyzer": "^4.5.0",
     "commitplease": "3.2.0",
     "conventional-github-releaser": "2.0.2",
