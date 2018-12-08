@@ -1,7 +1,7 @@
 <p align="center">
   <img alt="angular-material-extensions's logo"
    height="256px" width="256px" style="text-align: center;" 
-   src="https://cdn.rawgit.com/angular-material-extensions/link-preview/master/assets/angular-material-extensions-logo.png">
+   src="https://cdn.jsdelivr.net/gh/angular-material-extensions/link-preview/assets/angular-material-extensions-logo.png">
 </p>
 
 # @angular-material-extensions/link-preview - Angular open source UI library to preview web links powered by ngx-linkifyjs and material design
@@ -19,14 +19,14 @@
 
 <p align="center">
   <img alt="@angular-material-extensions/link-preview demo" width="500px" style="text-align: center;" 
-  src="https://cdn.rawgit.com/angular-material-extensions/link-preview/master/assets/demo1.gif">
+  src="https://cdn.jsdelivr.net/gh/angular-material-extensions/link-preview/assets/demo1.gif">
 </p>
 
 multiple link preview
 
 <p align="center">
   <img alt="@angular-material-extensions/link-preview demo with multiple preview" width="70%" style="text-align: center;" 
-  src="https://cdn.rawgit.com/angular-material-extensions/link-preview/master/assets/demo.png">
+  src="https://cdn.jsdelivr.net/gh/angular-material-extensions/link-preview/assets/demo.png">
 </p>
 
 
