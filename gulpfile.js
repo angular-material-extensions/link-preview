@@ -501,8 +501,7 @@ gulp.task('serve:doc', ['clean:doc'], (cb) => {
 const execDemoCmd = (args, opts) => {
   if (fs.existsSync(`${config.demoDir}/node_modules`)) {
     return execCmd('ng', args, opts, `/${config.demoDir}`);
-  }
-  else {
+  } else {
     fancyLog(acolors.yellow(`No 'node_modules' found in '${config.demoDir}'. Installing dependencies for you...`));
     return helpers.installDependencies({cwd: `${config.demoDir}`})
       .then(exitCode => exitCode === 0 ? execCmd('ng', args, opts, `/${config.demoDir}`) : Promise.reject())
@@ -671,8 +670,7 @@ gulp.task('release', (cb) => {
   if (!readyToRelease()) {
     fancyLog(acolors.red('# Pre-Release Checks have failed. Please fix them and try again. Aborting...'));
     cb();
-  }
-  else {
+  } else {
     fancyLog(acolors.green('# Pre-Release Checks have succeeded. Continuing...'));
     runSequence(
       'bump-version',
@@ -698,6 +696,16 @@ gulp.task('release', (cb) => {
 /////////////////////////////////////////////////////////////////////////////
 // Utility Tasks
 /////////////////////////////////////////////////////////////////////////////
+
+// setup the project by installing first the dependencies,
+// building the library and finally linking it
+gulp.task('setup', (cb) => {
+  return runSequence('install', 'build', 'link', cb);
+});
+
+gulp.task('install', () => {
+  return execExternalCmd('npm', 'i');
+});
 
 // Link 'dist' folder (create a local 'ng-scrollreveal' package that symlinks to it)
 // This way, we can have the demo project declare a dependency on 'ng-scrollreveal' (as it should)

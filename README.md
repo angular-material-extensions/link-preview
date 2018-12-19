@@ -67,10 +67,10 @@ View all the directives and components in action at [https://angular-material-ex
 <a name="peerDependencies"/>
 
 ## Requirements (peer dependencies):
-- [angular animations v7.0.2](https://www.npmjs.com/package/@angular/animations)
-- [angular http v7.0.2](https://www.npmjs.com/package/@angular/http)
-- [angular cdk v7.0.2](https://www.npmjs.com/package/@angular/cdk)
-- [angular material v7.0.2](https://www.npmjs.com/package/@angular/material)
+- [angular animations v7.x](https://www.npmjs.com/package/@angular/animations)
+- [angular http v7.x](https://www.npmjs.com/package/@angular/http)
+- [angular cdk v7.x](https://www.npmjs.com/package/@angular/cdk)
+- [angular material v7.x](https://www.npmjs.com/package/@angular/material)
 
 - [angular material theme](https://material.angular.io/guide/getting-started#step-4-include-a-theme)
 
@@ -208,10 +208,10 @@ Please checkout the full documentation [here](https://angular-material-extension
 $ git clone https://github.com/angular-material-extensions/link-preview.git
 ```
 
-- link the **@angular-material-extensions/link-preview** package
+- setup the **@angular-material-extensions/link-preview** package
 
 ```bash
-$ gulp link
+$ gulp setup
 ```
 
 - navigate to the demo app directory
@@ -219,19 +219,11 @@ $ gulp link
 $ cd demo
 ```
 
-- install the dependencies
+- install the dependencies and run the app
 ```bash
-$ npm i
+$ npm i && npm start
 ```
 
-- run/start/serve the app
-```bash
-$ npm run start
-```
-or
-```bash
-$ ng serve --open
-```
 - the app is now hosted by `http://localhost:4200/`
 
 
@@ -241,22 +233,12 @@ $ ng serve --open
 
 1. clone this [repo](https://github.com/angular-material-extensions/link-preview.git)
 2. Install the dependencies by running `npm i`
-3. build the library `npm run build` or `gulp build`
-To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
-
-```bash
-$ npm run build
-```
-
-4. Link the library 
-  - on windows `gulp link` or locally `npx gulp link`
-  - on mac/linux `sudo gulp link` or locally `sudo npx gulp link`
-  
- 5. Navigate to the demo app's directory
+3. setup the library `gulp setup`
+4. Navigate to the demo app's directory
   - `cd demo`
-  _ `npm i`
-  _ `npm start`
-
+  _ `npm i && npm start`
+  
+  ---
 
 
 <a name="other-angular-libraries"/>
