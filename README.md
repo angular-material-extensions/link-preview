@@ -16,6 +16,8 @@
 [![devDependency Status](https://david-dm.org/angular-material-extensions/link-preview/dev-status.svg?branch=master)](https://david-dm.org/angular-material-extensions/link-preview#info=devDependencies)
 [![Greenkeeper Badge](https://badges.greenkeeper.io/angular-material-extensions/link-preview.svg)](https://greenkeeper.io/)
 [![license](https://img.shields.io/github/license/angular-material-extensions/link-preview.svg?style=flat-square)](https://github.com/angular-material-extensions/link-preview/blob/master/LICENSE)
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/gdi2290/awesome-angular)
+
 
 <p align="center">
   <img alt="@angular-material-extensions/link-preview demo" width="500px" style="text-align: center;" 
