@@ -4,6 +4,7 @@ import {HomeComponent} from './home.component';
 import {MatLinkPreviewModule} from '@angular-material-extensions/link-preview';
 import {MatCardModule, MatInputModule} from '@angular/material';
 import {MarkdownModule} from 'ngx-markdown';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
