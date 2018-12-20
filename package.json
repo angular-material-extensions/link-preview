@@ -28,6 +28,9 @@
   "scripts": {
     "build": "gulp build",
     "test": " gulp test",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --runInBand",
+    "test:coverage": "jest --coverage",
     "demo": " gulp build:demo",
     "check-travis": " travis-status --repo=angular-material-extensions/link-preview --branch=master --fail-pending || echo 'Not yet passing'"
   },
