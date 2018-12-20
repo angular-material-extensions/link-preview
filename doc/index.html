@@ -33,7 +33,7 @@
 <p align="center">
   <img alt="angular-material-extensions's logo"
    height="256px" width="256px" style="text-align: center;" 
-   src="https://cdn.rawgit.com/angular-material-extensions/link-preview/master/assets/angular-material-extensions-logo.png">
+   src="https://cdn.jsdelivr.net/gh/angular-material-extensions/link-preview/assets/angular-material-extensions-logo.png">
 </p>
 
 <h1 id="-angular-material-extensions-link-preview-angular-open-source-ui-library-to-preview-web-links-powered-by-ngx-linkifyjs-and-material-design">@angular-material-extensions/link-preview - Angular open source UI library to preview web links powered by ngx-linkifyjs and material design</h1>
@@ -46,16 +46,17 @@
 <a href="https://david-dm.org/angular-material-extensions/link-preview"><img src="https://david-dm.org/angular-material-extensions/link-preview/status.svg" alt="dependency Status" class="img-responsive"></a>
 <a href="https://david-dm.org/angular-material-extensions/link-preview#info=devDependencies"><img src="https://david-dm.org/angular-material-extensions/link-preview/dev-status.svg?branch=master" alt="devDependency Status" class="img-responsive"></a>
 <a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/angular-material-extensions/link-preview.svg" alt="Greenkeeper Badge" class="img-responsive"></a>
-<a href="https://github.com/angular-material-extensions/link-preview/blob/master/LICENSE"><img src="https://img.shields.io/github/license/angular-material-extensions/link-preview.svg?style=flat-square" alt="license" class="img-responsive"></a></p>
+<a href="https://github.com/angular-material-extensions/link-preview/blob/master/LICENSE"><img src="https://img.shields.io/github/license/angular-material-extensions/link-preview.svg?style=flat-square" alt="license" class="img-responsive"></a>
+<a href="https://github.com/gdi2290/awesome-angular"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome" class="img-responsive"></a></p>
 <p align="center">
   <img alt="@angular-material-extensions/link-preview demo" width="500px" style="text-align: center;" 
-  src="https://cdn.rawgit.com/angular-material-extensions/link-preview/master/assets/demo1.gif">
+  src="https://cdn.jsdelivr.net/gh/angular-material-extensions/link-preview/assets/demo1.gif">
 </p>
 
 <p>multiple link preview</p>
 <p align="center">
   <img alt="@angular-material-extensions/link-preview demo with multiple preview" width="70%" style="text-align: center;" 
-  src="https://cdn.rawgit.com/angular-material-extensions/link-preview/master/assets/demo.png">
+  src="https://cdn.jsdelivr.net/gh/angular-material-extensions/link-preview/assets/demo.png">
 </p>
 
 
@@ -93,10 +94,10 @@ by starring :star: and sharing it :loudspeaker:</p>
 
 <h2 id="requirements-peer-dependencies-">Requirements (peer dependencies):</h2>
 <ul>
-<li><a href="https://www.npmjs.com/package/@angular/animations">angular animations v7.0.2</a></li>
-<li><a href="https://www.npmjs.com/package/@angular/http">angular http v7.0.2</a></li>
-<li><a href="https://www.npmjs.com/package/@angular/cdk">angular cdk v7.0.2</a></li>
-<li><p><a href="https://www.npmjs.com/package/@angular/material">angular material v7.0.2</a></p>
+<li><a href="https://www.npmjs.com/package/@angular/animations">angular animations v7.x</a></li>
+<li><a href="https://www.npmjs.com/package/@angular/http">angular http v7.x</a></li>
+<li><a href="https://www.npmjs.com/package/@angular/cdk">angular cdk v7.x</a></li>
+<li><p><a href="https://www.npmjs.com/package/@angular/material">angular material v7.x</a></p>
 </li>
 <li><p><a href="https://material.angular.io/guide/getting-started#step-4-include-a-theme">angular material theme</a></p>
 </li>
@@ -212,18 +213,16 @@ export class OtherModule {
 <ul>
 <li><p><a href="https://github.com/angular-material-extensions/link-preview.git">clone this repo</a> by running</p>
 <div><pre class="line-numbers"><code class="language-bash">$ git clone https://github.com/angular-material-extensions/link-preview.git</code></pre></div></li>
-<li><p>link the <strong>@angular-material-extensions/link-preview</strong> package</p>
+<li><p>setup the <strong>@angular-material-extensions/link-preview</strong> package</p>
 </li>
 </ul>
-<div><pre class="line-numbers"><code class="language-bash">$ gulp link</code></pre></div><ul>
+<div><pre class="line-numbers"><code class="language-bash">$ gulp setup</code></pre></div><ul>
 <li><p>navigate to the demo app directory</p>
 <div><pre class="line-numbers"><code class="language-bash">$ cd demo</code></pre></div></li>
-<li><p>install the dependencies</p>
-<div><pre class="line-numbers"><code class="language-bash">$ npm i</code></pre></div></li>
-<li><p>run/start/serve the app</p>
-<div><pre class="line-numbers"><code class="language-bash">$ npm run start</code></pre></div><p>or</p>
-<div><pre class="line-numbers"><code class="language-bash">$ ng serve --open</code></pre></div></li>
-<li>the app is now hosted by <code>http://localhost:4200/</code></li>
+<li><p>install the dependencies and run the app</p>
+<div><pre class="line-numbers"><code class="language-bash">$ npm i &amp;&amp; npm start</code></pre></div></li>
+<li><p>the app is now hosted by <code>http://localhost:4200/</code></p>
+</li>
 </ul>
 <a name="development"/>
 
@@ -231,21 +230,13 @@ export class OtherModule {
 <ol>
 <li>clone this <a href="https://github.com/angular-material-extensions/link-preview.git">repo</a></li>
 <li>Install the dependencies by running <code>npm i</code></li>
-<li>build the library <code>npm run build</code> or <code>gulp build</code>
-To generate all <code>*.js</code>, <code>*.d.ts</code> and <code>*.metadata.json</code> files:</li>
-</ol>
-<div><pre class="line-numbers"><code class="language-bash">$ npm run build</code></pre></div><ol start="4">
-<li><p>Link the library </p>
-<ul>
-<li>on windows <code>gulp link</code> or locally <code>npx gulp link</code></li>
-<li><p>on mac/linux <code>sudo gulp link</code> or locally <code>sudo npx gulp link</code></p>
-</li>
+<li>setup the library <code>gulp setup</code></li>
 <li><p>Navigate to the demo app&#39;s directory</p>
-</li>
+<ul>
 <li><code>cd demo</code>
-_ <code>npm i</code>
-_ <code>npm start</code></li>
+_ <code>npm i &amp;&amp; npm start</code></li>
 </ul>
+<hr>
 </li>
 </ol>
 <a name="other-angular-libraries"/>
