@@ -1,7 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { DebugElement } from '@angular/core';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { GettingStartedComponent } from './getting-started.component';
+import {GettingStartedComponent} from './getting-started.component';
+import {MarkdownModule} from 'ngx-markdown';
+import {HttpClientModule} from '@angular/common/http';
 
 describe('GettingStartedComponent', () => {
   let component: GettingStartedComponent;
@@ -9,6 +10,7 @@ describe('GettingStartedComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [MarkdownModule.forRoot(), HttpClientModule],
       declarations: [GettingStartedComponent]
     })
       .compileComponents()

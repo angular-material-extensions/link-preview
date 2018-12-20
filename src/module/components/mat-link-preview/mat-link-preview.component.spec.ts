@@ -21,8 +21,7 @@ describe('LinkPreviewComponent', function () {
       imports: [MatCardModule, MatProgressSpinnerModule, MatButtonModule, FormsModule],
       declarations: [MatLinkPreviewComponent],
       providers: [{provide: MatLinkPreviewService, useValue: linkPreviewServicePartial}]
-    })
-      .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
