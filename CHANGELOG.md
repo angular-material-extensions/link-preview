@@ -1,4 +1,12 @@
-<a name="1.1.0"></a>
+## [1.1.1](https://github.com/angular-material-extensions/link-preview/compare/v1.1.0...v1.1.1) (2018-12-20)
+
+
+### Bug Fixes
+
+* **package:** provided config InjectionToken `NgxLinkifyjsConfig!` [#50](https://github.com/angular-material-extensions/link-preview/issues/50) ([571eb06](https://github.com/angular-material-extensions/link-preview/commit/571eb06))
+
+
+
 # [1.1.0](https://github.com/angular-material-extensions/link-preview/compare/v1.0.2...v1.1.0) (2018-11-02)
 
 
@@ -8,7 +16,6 @@
 
 
 
-<a name="1.0.2"></a>
 ## [1.0.2](https://github.com/angular-material-extensions/link-preview/compare/v1.0.1...v1.0.2) (2018-08-06)
 
 
@@ -18,7 +25,6 @@
 
 
 
-<a name="1.0.1"></a>
 ## [1.0.1](https://github.com/angular-material-extensions/link-preview/compare/v1.0.0...v1.0.1) (2018-08-02)
 
 
@@ -28,7 +34,6 @@
 
 
 
-<a name="1.0.0"></a>
 # [1.0.0](https://github.com/angular-material-extensions/link-preview/compare/85e9bc0...v1.0.0) (2018-08-02)
 
 
