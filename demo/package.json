@@ -63,7 +63,7 @@
     "@nguniversal/module-map-ngfactory-loader": "^7.0.0",
     "@types/jest": "^23.3.12",
     "@types/node": "^6.14.2",
-    "ansi-colors": "^3.2.3",
+    "ansi-colors": "^4.0.1",
     "codelyzer": "^4.5.0",
     "express": "^4.16.4",
     "greenkeeper-lockfile": "1.15.1",
