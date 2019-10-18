@@ -1,26 +1,28 @@
-import { Directive, ElementRef, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { Link, NgxLinkifyjsService } from 'ngx-linkifyjs';
-
-import { MatLinkPreviewService } from '../../module/service/mat-link-preview.service';
+import {Directive, ElementRef, Input, OnInit} from '@angular/core';
+import {Link, NgxLinkifyjsService} from 'ngx-linkifyjs';
+import {MatLinkPreviewService} from '../../module/service/mat-link-preview.service';
 
 @Directive({
   selector: '[matLinkPreview]',
   exportAs: '[matLinkPreview]',
 })
-export class MatLinkPreviewDirective implements OnChanges {
+export class MatLinkPreviewDirective implements OnInit  {
   @Input()
-  input: string
+  input: string;
 
   constructor(public linkifyService: NgxLinkifyjsService,
-              public linkPreviewService: MatLinkPreviewService) {
+              public linkPreviewService: MatLinkPreviewService,
+              private _elemRef: ElementRef) {
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes.input && changes.input.currentValue) {
-      const data = changes.input.currentValue;
-      const links: Link[] = this.linkifyService.find(data);
-      this.linkPreviewService.onLinkFound.emit(links);
-    }
+  ngOnInit() {
+    this._elemRef.nativeElement.oninput = (inputEvent: any) => {
+      setTimeout( () => {
+        const data = inputEvent.target.value;
+        const links: Link[] = this.linkifyService.find(data);
+        this.linkPreviewService.onLinkFound.emit(links);
+      }, 2000)
+    };
   }
 
 }
