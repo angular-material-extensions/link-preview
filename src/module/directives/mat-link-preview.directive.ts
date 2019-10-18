@@ -7,8 +7,6 @@ import {MatLinkPreviewService} from '../../module/service/mat-link-preview.servi
   exportAs: '[matLinkPreview]',
 })
 export class MatLinkPreviewDirective implements OnInit  {
-  @Input()
-  input: string;
 
   constructor(public linkifyService: NgxLinkifyjsService,
               public linkPreviewService: MatLinkPreviewService,
