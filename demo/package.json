@@ -44,7 +44,7 @@
     "@ng-bootstrap/ng-bootstrap": "^4.0.1",
     "@stackblitz/sdk": "^1.2.0",
     "bootstrap": "^4.2.1",
-    "core-js": "^2.6.2",
+    "core-js": "^3.6.1",
     "font-awesome": "^4.7.0",
     "ngx-markdown": "^7.0.4",
     "rxjs": "^6.3.3",
