@@ -35,7 +35,7 @@ describe('MatLinkPreviewService', () => {
 
         return req.url === 'https://api.linkpreview.net/'
           && req.method === 'GET'
-          && params.get('key') === '5b54e80a65c77848ceaa4630331e8384950e09d392365'
+          && params.get('key') === ''
           && params.get('q') === 'github.com';
       }, `Get link info from api`);
     })));
