@@ -24,10 +24,8 @@ export class MatLinkPreviewService {
   }
 
   fetchLink(url: string): Observable<LinkPreview> {
-    const params = new HttpParams()
-      .append('key', this._accessKey)
-      .append('q', url);
+    const body = { key: this._accessKey, q: url };
 
-    return this.http.get(this._apiURL, {params: params}).pipe(map(value => value as LinkPreview));
+    return this.http.post(this._apiURL, body).pipe(map(value => value as LinkPreview));
   }
 }
