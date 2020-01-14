@@ -8,7 +8,7 @@ import {LinkPreview} from '../..';
 @Injectable()
 export class MatLinkPreviewService {
 
-  private _accessKey = '5b54e80a65c77848ceaa4630331e8384950e09d392365';
+  private _accessKey = '';
   private _apiURL = 'https://api.linkpreview.net/';
 
   onLinkFound: EventEmitter<Array<Link>> = new EventEmitter<Array<Link>>();
@@ -19,12 +19,13 @@ export class MatLinkPreviewService {
     this.onLinkFound.subscribe((links: Array<Link>) => this.links = links);
   }
 
-  fetchLink(url: string): Observable<LinkPreview> {
-    console.log('fetching the following link: ', url);
-    const params = new HttpParams()
-      .append('key', this._accessKey)
-      .append('q', url);
+  setAccessKey(accessKey: string) {
+    this._accessKey = accessKey;
+  }
 
-    return this.http.get(this._apiURL, {params: params}).pipe(map(value => value as LinkPreview));
+  fetchLink(url: string): Observable<LinkPreview> {
+    const body = { key: this._accessKey, q: url };
+
+    return this.http.post(this._apiURL, body).pipe(map(value => value as LinkPreview));
   }
 }
