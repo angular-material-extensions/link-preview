@@ -97,7 +97,7 @@
     "run-sequence": "^2.2.1",
     "rxjs": "^6.5.2",
     "sass-loader": "^7.1.0",
-    "source-map-loader": "^0.2.4",
+    "source-map-loader": "^1.0.0",
     "to-string-loader": "^1.1.5",
     "travis-status": "^3.0.1",
     "tsickle": "^0.33.0",
